@@ -15,14 +15,13 @@ public class Philosopher implements Runnable {
         while(true) {
             try {
                 System.out.println("Philosopher " + id + " is thinking!");
-                Thread.sleep(1000);
+                Thread.sleep(800);
                 System.out.println("Philosopher " + id + " is hungry!");
                 Dinner.getCutlery(this.id);
                 System.out.println("Philosopher " + id + " is eating!");
                 Thread.sleep(200);
                 System.out.println("Philosopher " + id + " has finished eating!");
                 Dinner.dropCutlery(this.id);
-
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

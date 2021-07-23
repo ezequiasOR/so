@@ -18,6 +18,7 @@ public class Dinner {
             philosophers[i] = new Philosopher(i);
         }
     }
+
     public static void dropCutlery(int id) throws InterruptedException {
         philosophers[id].state = THINKING;
         if (philosophers[right(id)].state == HUNGRY && philosophers[right(right(id))].state != EATING) {
